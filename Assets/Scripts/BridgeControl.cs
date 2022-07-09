@@ -14,15 +14,15 @@ public class BridgeControl : MonoBehaviour
     {
         if (flag)
         {
-            sec += Time.fixedDeltaTime * speed;
-            Debug.Log(sec);
-            if (sec > 50)
+            sec = Time.fixedDeltaTime * speed;
+            //Debug.Log(active1.transform.rotation.z);
+            if (active1.transform.rotation.z > 0.5)
                 flag = false;
         }
             else
         {
-            //sec = Time.fixedDeltaTime * speed;
-            if (sec <= 0)
+            sec = -Time.fixedDeltaTime * speed;
+            if (active1.transform.rotation.z <= 0)
                 flag = true;
         }
         
