@@ -21,7 +21,8 @@ MonoBehaviour:
   - m_Start: -58
     m_End: -10
     m_Order: 0
-    m_Sprites: []
+    m_Sprites:
+    - {fileID: 21300000, guid: 0d8c2b65ae233904b99cddc12a72a6bb, type: 3}
   - m_Start: -131
     m_End: -58
     m_Order: 0
@@ -37,7 +38,8 @@ MonoBehaviour:
   - m_Start: 12
     m_End: 72
     m_Order: 0
-    m_Sprites: []
+    m_Sprites:
+    - {fileID: 21300000, guid: 0d8c2b65ae233904b99cddc12a72a6bb, type: 3}
   m_FillTexture: {fileID: 2800000, guid: ec951b08181110148b387ef7b4bd697b, type: 3}
   m_CornerSprites:
   - m_CornerType: 0

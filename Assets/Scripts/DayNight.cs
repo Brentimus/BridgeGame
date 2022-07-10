@@ -18,7 +18,6 @@ public class DayNight : MonoBehaviour
     void Start()
     {
         ppv = gameObject.GetComponent<Volume>();
-        secCycle = 15;
     }
 
     void FixedUpdate() 

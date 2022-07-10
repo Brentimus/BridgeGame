@@ -22,7 +22,7 @@ public class BridgeControl : MonoBehaviour
             else
         {
             sec = -Time.fixedDeltaTime * speed;
-            if (active1.transform.rotation.z <= 0)
+            if (active1.transform.rotation.z <= -0.03)
                 flag = true;
         }
         
