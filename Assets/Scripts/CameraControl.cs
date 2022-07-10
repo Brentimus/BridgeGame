@@ -42,7 +42,7 @@ public class CameraControl : MonoBehaviour
     void Update()
     {
         Vector3 _newPosition = _player.position;
-        _newPosition.z = -10f;
+        _newPosition.z = -3f;
         _newPosition.x = _player.position.x + 3f;
         //_newPosition.y = 0.5f;
 
