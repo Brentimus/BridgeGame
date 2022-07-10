@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sky
+    uniqueID: 827052273
+    locked: 0
+  - name: Car
+    uniqueID: 1915200983
+    locked: 0
+  - name: Road
+    uniqueID: 957041427
+    locked: 0
