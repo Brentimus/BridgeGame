@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject gameOver;
+    public GameObject nextLevelCanvas;
     bool flagGameover = false;
+    bool nextLevel = false;
     void Start()
     {
         gameOver.SetActive(false);
@@ -17,6 +19,11 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && flagGameover)
         {
             ResetGame();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && nextLevel)
+        {
+            NextLevel();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -41,5 +48,20 @@ public class GameManager : MonoBehaviour
         flagGameover = false;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Finish()
+    {
+        Time.timeScale = 0;
+        nextLevelCanvas.SetActive(true);
+        nextLevel = true;
+    }
+    public void NextLevel()
+    {
+        nextLevel = false;
+        Time.timeScale = 1;
+        nextLevelCanvas.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("11");
     }
 }

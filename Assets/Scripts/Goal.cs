@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Goal : MonoBehaviour
 {
     public int nextSceneLoad;
+    public GameManager gameManager;
     private void Start()
     {
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
@@ -14,8 +15,7 @@ public class Goal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("WON");
-            //SceneManager.LoadScene(nextSceneLoad);
+            gameManager.Finish();
         }
 
         if (nextSceneLoad > PlayerPrefs.GetInt ("levelAt"))
