@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject nextLevelCanvas;
     bool flagGameover = false;
     bool nextLevel = false;
+    bool flagMenu = false;
     void Start()
     {
         gameOver.SetActive(false);
@@ -24,6 +25,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && nextLevel)
         {
             NextLevel();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && flagMenu)
+        {
+            flagMenu = false;
+            SceneManager.LoadScene(0);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -52,9 +59,16 @@ public class GameManager : MonoBehaviour
 
     public void Finish()
     {
-        Time.timeScale = 0;
+        if (SceneManager.GetActiveScene().buildIndex != 4)
+        {
+            Time.timeScale = 0;
+            Debug.Log(SceneManager.GetActiveScene().buildIndex);
+            nextLevel = true;
+        }
+            
+        else
+            flagMenu = true;
         nextLevelCanvas.SetActive(true);
-        nextLevel = true;
     }
     public void NextLevel()
     {
