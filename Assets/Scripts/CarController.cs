@@ -5,15 +5,27 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     public float speed = 1500;
+    public float rotationSpeed = 150f;
 
     private float movement = 0f;
+    private float rotation = 0f;
 
     public WheelJoint2D leftWheel;
     public WheelJoint2D rightWheel;
 
+    public Rigidbody2D rb;
+
     private void Update()
     {
-        movement = -Input.GetAxisRaw("Vertical") * speed;
+        if (Input.GetKey(KeyCode.Mouse0)) {
+            movement = -1 * speed;
+            rotation = -1;
+        } else
+        {
+            movement = -Input.GetAxisRaw("Vertical") * speed;
+            rotation = Input.GetAxisRaw("Horizontal");
+        }
+            
     }
 
     private void FixedUpdate()
@@ -31,5 +43,6 @@ public class CarController : MonoBehaviour
             leftWheel.motor = motor;
             rightWheel.motor = motor;
         }
+        rb.AddTorque(-rotation * rotationSpeed * Time.fixedDeltaTime);
     }
 }
