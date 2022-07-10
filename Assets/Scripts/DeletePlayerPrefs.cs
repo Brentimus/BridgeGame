@@ -9,7 +9,7 @@ public class DeletePlayerPrefs : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Delete))
         {
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
         }
     }
 }

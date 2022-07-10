@@ -15,11 +15,19 @@ public class CarController : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public AudioSource motor;
+
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            motor.Play();
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+            motor.Pause();
+
         if (Input.GetKey(KeyCode.Mouse0)) {
             movement = -1 * speed;
             rotation = -1;
+            
         } else
         {
             movement = -Input.GetAxisRaw("Vertical") * speed;

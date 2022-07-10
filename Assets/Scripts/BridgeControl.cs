@@ -7,7 +7,7 @@ public class BridgeControl : MonoBehaviour
     public Transform active1;
     public Transform active2;
     private float sec = 0;
-    public float speed = 1;
+    public float speed;
     bool flag = true;
 
     void Update()

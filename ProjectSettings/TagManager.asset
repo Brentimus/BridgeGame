@@ -45,6 +45,9 @@ TagManager:
   - name: Sky
     uniqueID: 827052273
     locked: 0
+  - name: House
+    uniqueID: 2639411461
+    locked: 0
   - name: Car
     uniqueID: 1915200983
     locked: 0

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     bool flagGameover = false;
     bool nextLevel = false;
     bool flagMenu = false;
+    public bool DLC = false;
     void Start()
     {
         gameOver.SetActive(false);
@@ -61,11 +62,15 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex != 4)
         {
-            Time.timeScale = 0;
-            Debug.Log(SceneManager.GetActiveScene().buildIndex);
-            nextLevel = true;
+            if (SceneManager.GetActiveScene().buildIndex == 7)
+                flagMenu = true;
+            else
+            {
+                Time.timeScale = 0;
+                Debug.Log(SceneManager.GetActiveScene().buildIndex);
+                nextLevel = true;
+            }
         }
-            
         else
             flagMenu = true;
         nextLevelCanvas.SetActive(true);

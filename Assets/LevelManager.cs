@@ -7,6 +7,9 @@ public class LevelManager : MonoBehaviour
 {
     public void ChangeScene(int level)
     {
-        SceneManager.LoadScene(level);
+        if (PlayerPrefs.GetInt("DLC") == 1)
+            SceneManager.LoadScene(level + 3);
+        else
+            SceneManager.LoadScene(level);
     }
 }
