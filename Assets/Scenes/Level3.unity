@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Color: {r: 0.9433962, g: 0.7587613, b: 0, a: 1}
   m_Intensity: 4.42
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000d7a52772134b0b39
+  m_ApplyToSortingLayers: 00000000d7a52772134b0b390539529d
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 1
   m_LightOrder: 0
@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 115585808088919413, guid: 74d79959958248044b5a7401bda1b6d7, type: 3}
       propertyPath: speed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 115585808088919414, guid: 74d79959958248044b5a7401bda1b6d7, type: 3}
       propertyPath: m_Name
@@ -3162,6 +3162,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1254714606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 115585808088919414, guid: 74d79959958248044b5a7401bda1b6d7, type: 3}
+  m_PrefabInstance: {fileID: 115585809229326279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1254714609
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254714606}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 18.329124, y: -7.429535}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.89167786, y: 11.393276}
+  m_EdgeRadius: 0
 --- !u!1 &1264319944
 GameObject:
   m_ObjectHideFlags: 0
@@ -5413,6 +5444,14 @@ PrefabInstance:
     - target: {fileID: 793548161096068529, guid: 74d79959958248044b5a7401bda1b6d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181590868733856896, guid: 74d79959958248044b5a7401bda1b6d7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7163301027854191258, guid: 74d79959958248044b5a7401bda1b6d7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d79959958248044b5a7401bda1b6d7, type: 3}
